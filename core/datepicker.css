@@ -1,0 +1,96 @@
+.datepicker {
+    z-index: 10;
+}
+.datepicker__input input {
+    width: 100%;
+}
+.datepicker__calendar {
+    border: 1px solid black;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+.datepicker__calendar--show {
+    margin-bottom: 20px;
+    height: auto;
+    opacity: 1;
+}
+.datepicker__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+.datepicker__header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.datepicker__header-text h2, .datepicker__header-text p {
+    margin: 0;
+}
+.datepicker__arrow {
+    padding: 10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+}
+.datepicker__arrow:hover {
+    color: black;
+}
+.datepicker__body {
+    position: relative;
+}
+.datepicker__daynames-list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.datepicker__daynames-list-item {
+    font-size: 12px;
+    width: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.datepicker__days-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+.datepicker__days-list-item {
+    width: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 5px 0;
+    position: relative;
+    color: black;
+    cursor: pointer;
+}
+.datepicker__days-list-item::before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    content: &#34;
+   &#34;
+   ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.datepicker__days-list-item:hover {
+    color: white;
+}
+.datepicker__days-list-item:hover::before {
+    background-color: black;
+}
